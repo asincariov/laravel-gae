@@ -1,0 +1,60 @@
+runtime: php
+env: flex
+
+runtime_config:
+  operating_system: "ubuntu22"
+  runtime_version: "8.2"
+  document_root: public
+
+skip_files:
+  - .env
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+
+env_variables:
+  APP_DEBUG: false
+  APP_URL: "https://assumable-app.uc.r.appspot.com"
+  APP_ENV: production
+  APP_KEY: "base64:ctQUvIJcGE9acitSN1+6lDTe23kmEG9ScjwADz/uPPU="
+  APP_NAME: "Assumable"
+
+  BROADCAST_DRIVER: log
+  CACHE_DRIVER: file
+  QUEUE_CONNECTION: sync
+  SESSION_DRIVER: file
+  SESSION_LIFETIME: 120
+
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+
+  LOG_LEVEL: "debug"
+
+  DB_CONNECTION: cloud_mysql
+  DB_HOST: "34.27.156.94"
+  DB_PORT: "3306"
+  DB_DATABASE: hously
+  DB_USERNAME: root
+  DB_PASSWORD: "%`cs*3gg$F\n.Pfd"
+  DB_SOCKET: "/cloudsql/assumable-app:us-central1:assumable"
+
+  ADMIN_DIR: "admin"
+
+  BLOG_USE_LANGUAGE_VERSION_2: true
+  PAGE_USE_LANGUAGE_VERSION_2: true
+  REAL_ESTATE_USE_LANGUAGE_VERSION_2: true
+
+
+  ZILLOW_KEY: "911d13bd-005c-4e8a-9943-6515942b7df4"
+
+  GOOGLE_CLOUD_KEY_FILE: "assumable-app-93fb02c0fcca.json"
+  GOOGLE_CLOUD_PROJECT_ID: "assumable-app"
+  GOOGLE_CLOUD_STORAGE_BUCKET: "assumable"
+
+  FILESYSTEM_DISK: "gcs"
+
+
+beta_settings:
+  cloud_sql_instances: assumable-app:us-central1:assumable
+
