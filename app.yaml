@@ -5,6 +5,8 @@ runtime_config:
   operating_system: "ubuntu22"
   runtime_version: "8.2"
   document_root: public
+  skip_lockdown_document_root: true
+  enable_stackdriver_integration: true
 
 skip_files:
   - .env
